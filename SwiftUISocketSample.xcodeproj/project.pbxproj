@@ -14,6 +14,7 @@
 		203CB134296B872F006A8AAC /* SwiftUISocketSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203CB133296B872F006A8AAC /* SwiftUISocketSampleTests.swift */; };
 		203CB13E296B872F006A8AAC /* SwiftUISocketSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203CB13D296B872F006A8AAC /* SwiftUISocketSampleUITests.swift */; };
 		203CB140296B872F006A8AAC /* SwiftUISocketSampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203CB13F296B872F006A8AAC /* SwiftUISocketSampleUITestsLaunchTests.swift */; };
+		203CB14E296B8815006A8AAC /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 203CB14D296B8815006A8AAC /* SocketIO */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				203CB14E296B8815006A8AAC /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = SwiftUISocketSample;
+			packageProductDependencies = (
+				203CB14D296B8815006A8AAC /* SocketIO */,
+			);
 			productName = SwiftUISocketSample;
 			productReference = 203CB11F296B872F006A8AAC /* SwiftUISocketSample.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 203CB116296B872E006A8AAC;
+			packageReferences = (
+				203CB14C296B8815006A8AAC /* XCRemoteSwiftPackageReference "socket.io-client-swift" */,
+			);
 			productRefGroup = 203CB120296B872F006A8AAC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -583,6 +591,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		203CB14C296B8815006A8AAC /* XCRemoteSwiftPackageReference "socket.io-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		203CB14D296B8815006A8AAC /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 203CB14C296B8815006A8AAC /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 203CB117296B872E006A8AAC /* Project object */;
 }
